@@ -1,0 +1,14 @@
+{
+ "version":1,"label":"Tunnel editable motion demo",
+ "actions":[
+  {"op":"createComp","name":"Tunnel Demo - Editable Motion","width":1920,"height":1080,"duration":5,"fps":25,"as":"scene"},
+  {"op":"solid","comp":{"ref":"scene"},"name":"Deep teal background","color":[0.015,0.055,0.075]},
+  {"op":"shape","comp":{"ref":"scene"},"kind":"rectangle","size":[620,320],"roundness":48,"fill":[0.04,0.65,0.61],"position":[960,500],"name":"Animated card","as":"card"},
+  {"op":"animate","comp":{"ref":"scene"},"layer":{"ref":"card"},"property":["ADBE Transform Group","ADBE Scale"],"keys":[{"time":0,"value":[30,30]},{"time":1,"value":[100,100]},{"time":3.8,"value":[110,110]},{"time":4.9,"value":[100,100]}],"influence":75},
+  {"op":"animate","comp":{"ref":"scene"},"layer":{"ref":"card"},"property":["ADBE Transform Group","ADBE Position"],"keys":[{"time":0,"value":[960,850]},{"time":1,"value":[960,500]}]},
+  {"op":"text","comp":{"ref":"scene"},"text":"MAKE IT MOVE","name":"Headline","fontSize":72,"position":[960,520],"as":"title"},
+  {"op":"animate","comp":{"ref":"scene"},"layer":{"ref":"title"},"property":["ADBE Transform Group","ADBE Opacity"],"keys":[{"time":0.5,"value":0},{"time":1.3,"value":100}]},
+  {"op":"compSettings","comp":{"ref":"scene"},"time":2,"motionBlur":true},
+  {"op":"inspect","comp":{"ref":"scene"}}
+ ]
+}
